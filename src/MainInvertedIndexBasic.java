@@ -30,6 +30,9 @@ public class MainInvertedIndexBasic {
         cobaList.add("hari", "doc1");
 
         System.out.println(cobaList);
+        System.out.println(cobaList);
+        System.out.println(cobaList);
+        System.out.println(cobaList);
 //        System.out.println("");
 //        cobaList.searchTerm("pada hari minggu");
         
