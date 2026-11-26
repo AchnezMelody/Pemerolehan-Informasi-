@@ -33,7 +33,7 @@ public class MainInvertedIndexBasic {
         System.out.println(cobaList);
         System.out.println(cobaList);
 
-//        System.out.println("");
+//       System.out.println("");
 //        cobaList.searchTerm("pada hari minggu");
         
     }
