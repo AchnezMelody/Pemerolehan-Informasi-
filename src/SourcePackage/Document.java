@@ -1,24 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package id.ac.usd.ti.wawan.ir;
+package SourcePackage;
 
-/**
- *
- * @author basis28
- */
 public class Document implements Comparable<Document> {
 
     protected String document;
-//    protected int frequency;
 
     public Document() {
     }
 
     public Document(String inDocument) {
         document = inDocument;
-//        frequency = 1;
     }
 
     public String getDocument() {
@@ -32,7 +22,5 @@ public class Document implements Comparable<Document> {
     public String toString() {
         return document;
     }
-//    public int getFrequency() {
-//        return frequency;
-//    }
+
 }

@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package id.ac.usd.ti.wawan.ir;
+package SourcePackage;
 
-/**
- *
- * @author wawan
- */
 public class InvertedIndexBasic {
 
     private LinkedListOrderedUnique<Term> termList;
@@ -38,10 +30,14 @@ public class InvertedIndexBasic {
             vTerm.addDocument(pDocument);
         }
     }
-    
+
     @Override
-    public String toString(){
-        return termList.toString();
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Term t : termList) {          // LinkedList sudah Iterable
+            sb.append(t.toString()).append("\n");
+        }
+        return sb.toString();
     }
 
 }

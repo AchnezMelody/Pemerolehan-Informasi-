@@ -1,17 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package id.ac.usd.ti.wawan.ir;
+package SourcePackage;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
-//import id.ac.usd.ti.wawan.ir.Increment;
 
-/**
- *
- * @author wawan
- */
 public class LinkedListOrderedUnique<E> extends LinkedList<E> {
 
     public boolean addSort(E e) {
@@ -51,3 +42,4 @@ public class LinkedListOrderedUnique<E> extends LinkedList<E> {
         return temp;
     }
 }
+

@@ -1,15 +1,5 @@
-package id.ac.usd.ti.wawan.ir;
+package SourcePackage;
 
-import java.util.LinkedList;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author basis28
- */
 public class Term implements Comparable<Term> {
 
     protected String term;
