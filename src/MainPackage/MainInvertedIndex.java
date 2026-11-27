@@ -14,8 +14,14 @@ public class MainInvertedIndex {
 
         InvertedIndexBasic cobaList = new InvertedIndexBasic();
 
+        // Karakter pemisah yang diubah menjadi spasi sebelum tokenisasi: - dan /
+        String regexPemisahSpasi = "[-/]";
+
+        // Sisa tanda baca yang dihapus dari token: ! " & ' ( ) * , . : @
+        String regexHapusTandaBaca = "[!\"&'()*,. :@]";
+
         // Path direktori koleksi (sesuaikan)
-        String path = "./Koleksi";
+        String path = "../Koleksi";
         File dir = new File(path);
 
         if (dir.exists() && dir.isDirectory()) {
@@ -39,17 +45,20 @@ public class MainInvertedIndex {
                             while (input.hasNextLine()) {
                                 String line = input.nextLine();
 
-                                // Tokenisasi per baris
-                                StringTokenizer tokens = new StringTokenizer(line);
+                                // 1. Lowercase dan ubah '-' serta '/' menjadi spasi
+                                String normalizedLine = line.toLowerCase().replaceAll(regexPemisahSpasi, " ");
+
+                                // 2. Tokenisasi per baris berdasarkan spasi/whitespace
+                                StringTokenizer tokens = new StringTokenizer(normalizedLine);
 
                                 while (tokens.hasMoreTokens()) {
-                                    String token = tokens.nextToken();
+                                    // 3. Hapus tanda baca lain pada token
+                                    String token = tokens.nextToken().replaceAll(regexHapusTandaBaca, "");
 
-                                    // Normalisasi sederhana: lowercase
-                                    token = token.toLowerCase();
-
-                                    // === INI PENGGANTI cobaList.add manual ===
-                                    cobaList.add(token, docId);
+                                    // Hindari memasukkan token kosong
+                                    if (!token.isEmpty()) {
+                                        cobaList.add(token, docId);
+                                    }
                                 }
                             }
                         } catch (FileNotFoundException e) {
