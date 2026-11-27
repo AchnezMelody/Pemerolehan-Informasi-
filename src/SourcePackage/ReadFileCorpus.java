@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class CollectionReader {
+public class ReadFileCorpus {
 
     // Karakter pemisah yang diubah menjadi spasi sebelum tokenisasi: - dan /
     private static final String REGEX_PEMISAH_SPASI = "[-/]";
@@ -18,7 +18,7 @@ public class CollectionReader {
 
     private final String folderPath;
 
-    public CollectionReader(String folderPath) {
+    public ReadFileCorpus(String folderPath) {
         this.folderPath = folderPath;
     }
 

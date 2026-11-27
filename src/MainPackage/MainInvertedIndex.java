@@ -1,14 +1,14 @@
 package MainPackage;
 
 import SourcePackage.InvertedIndexBasic;
-import SourcePackage.CollectionReader;
+import SourcePackage.ReadFileCorpus;
 
 public class MainInvertedIndex {
 
     public static void main(String[] args) {
         String path = "Koleksi";
 
-        CollectionReader reader = new CollectionReader(path);
+        ReadFileCorpus reader = new ReadFileCorpus(path);
         InvertedIndexBasic cobaList = reader.loadIndex();
 
         // Cetak hasil inverted index
